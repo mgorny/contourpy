@@ -63,6 +63,7 @@ jobs:
       - name: Install contourpy
         shell: bash
         run: |
+          export CFLAGS="-UNDEBUG"
           if [[ ${{ matrix.debug }} == 0 ]];
           then
             if [[ ${{ matrix.test-image }} == 1 ]];
